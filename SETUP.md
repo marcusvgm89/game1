@@ -29,9 +29,24 @@ The following pixel events are already configured:
 
 ## Deployment
 
-Deploy to Vercel or Netlify:
+### Cloudflare Pages (Recommended)
+
+1. Push your code to GitHub
+2. Go to Cloudflare Dashboard > Pages > Create a project
+3. Connect your GitHub repository
+4. Configure build settings:
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - Node version: 18
+5. Click "Save and Deploy"
+
+Your site will be live at: `https://jogos-retro.pages.dev`
+
+### Alternative: Manual Deploy
+
 ```bash
 npm run build
+npx wrangler pages deploy dist
 ```
 
 The build output will be in the `dist/` folder.
